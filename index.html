@@ -158,6 +158,11 @@ button:hover{background:var(--accent-soft)}
 .atlas .side{display:grid;gap:10px;align-content:center;border-left:2px solid #1B1B18;padding-left:24px}
 .atlas .side .big{font-size:2.6rem;font-weight:700;line-height:1}
 @media (max-width:820px){.atlas{grid-template-columns:1fr;padding:24px}.atlas .side{border-left:0;border-top:2px solid #1B1B18;padding-left:0;padding-top:16px}}
+.intro{display:grid;grid-template-columns:220px 1fr;gap:32px;align-items:start;padding-bottom:8px}
+.intro > *{min-width:0}
+.headshot{aspect-ratio:1/1;width:100%;max-width:220px;border-radius:50%;background:var(--surface);border:3px solid var(--zebra);display:grid;place-items:center}
+.biolink{font-size:1.05rem}
+@media (max-width:620px){.intro{grid-template-columns:1fr}.headshot{max-width:160px}}
 .foot{border-top:1px solid var(--line);padding-block:32px 40px;color:var(--muted);font-size:.9rem;display:grid;gap:10px}
 
 @media (max-width:820px){
@@ -182,6 +187,7 @@ button:hover{background:var(--accent-soft)}
       <li><a href="#home">Home</a></li>
       <li><a href="#work">My Work</a></li>
       <li><a href="#coaching">Health Coaching</a></li>
+      <li><a href="#bio">Bio</a></li>
       <li><a href="#about">About</a></li>
     </ul></nav>
   </div>
@@ -224,6 +230,15 @@ button:hover{background:var(--accent-soft)}
 
 <!-- WORK -->
 <section class="view" id="v-work" hidden>
+  <div class="intro">
+    <div class="headshot" aria-label="Headshot placeholder"><span class="ph">Headshot</span></div>
+    <div class="stack">
+      <span class="eyebrow">Short bio</span>
+      <p id="shortbio">Dr. Valerie Iovine Rogers, PT, DPT, is a physical therapist and Program Manager at the Cohen Center for Recovery from Complex Chronic Illness (CoRE) at the Icahn School of Medicine at Mount Sinai. She is the author of ATLAS, Mount Sinai's Autonomic Rehabilitation Framework, and the founder of the Iovine Cluster. A nationally recognized educator in Ehlers-Danlos syndrome, dysautonomia, and infection-associated chronic illness, she has trained hundreds of physical therapists and lives with the conditions she treats.</p>
+      <div class="email"><button type="button" data-copy="shortbio" data-label="Copy short bio">Copy short bio</button><a href="#bio">Read my full professional bio →</a></div>
+    </div>
+  </div>
+
   <div class="split">
     <div class="stack">
       <span class="eyebrow">My Work</span>
@@ -367,6 +382,37 @@ button:hover{background:var(--accent-soft)}
   </div>
 </section>
 
+
+<!-- BIO -->
+<section class="view" id="v-bio" hidden>
+  <div class="prose">
+    <span class="eyebrow">The Professional Bio</span>
+    <h2>Dr. Valerie Iovine Rogers, PT, DPT</h2>
+    <p>Dr. Valerie Iovine Rogers, PT, DPT, is a nationally recognized physical therapist, educator, and program manager specializing in complex chronic illnesses, with a particular focus on connective tissue disorders and autonomic dysfunction such as Ehlers-Danlos syndrome (EDS) and postural orthostatic tachycardia syndrome (POTS). She currently serves as a Program Manager at the Cohen Center for Recovery from Complex Chronic Illness (CoRE) at the Icahn School of Medicine at Mount Sinai, where she leads educational initiatives, develops clinical training for hypermobility and dysautonomia management, authored ATLAS, the Icahn School of Medicine at Mount Sinai's Autonomic Rehabilitation Framework, and its manual, founded the Iovine Cluster, co-authored the IACCI Provider Manual (2nd ed.), and contributes to ongoing research into underrecognized multisystemic conditions.</p>
+    <p>Dr. Rogers earned her Doctor of Physical Therapy and Bachelor of Science in Health Sciences through Drexel University's accelerated program, graduating magna cum laude (BS, 2019) and summa cum laude (DPT, 2021), with multiple leadership roles and honors. She later earned a Certificate in Wellness Counseling from Cornell University, graduating summa cum laude. Her academic journey has been marked by a deep commitment to patient advocacy, interprofessional collaboration, and the advancement of evidence-informed care models for underserved populations.</p>
+    <p>Before joining Mount Sinai, Dr. Rogers founded the EDS and POTS Clinical Specialty Program at Strive Physical Therapy. Under her leadership, the program grew rapidly to serve over 100 hypermobile patients annually, and she led a special interest group training physical therapists across the tri-state area to better understand and manage connective tissue disorders and autonomic dysfunction. Today she continues to train physical therapists across many PT companies.</p>
+    <p>Dr. Rogers has received numerous accolades for her work, including being named Strive Physical Therapy's Clinician of the Year and receiving the Outstanding Healthcare Provider of the Year award from the Ehlers-Danlos Society, an honor voted on by the patient community. She has presented nationally and internationally, including as an invited speaker at the Global Learning Conferences hosted by the Ehlers-Danlos Society in Dublin, Ireland (2023) and Philadelphia (2024).</p>
+    <p>Her research focuses on objectifying assessments of joint laxity in individuals with EDS, including collaborations with experts like Dr. Dawn Gulick. She has also contributed to the development of clinical pathways for POTS management within major healthcare systems, and leads research projects at the Icahn School of Medicine at Mount Sinai alongside Dr. David Putrino. A strong advocate for early recognition and interdisciplinary education, she has developed and delivered outreach programs for school nurses and other frontline healthcare providers to improve early identification of connective tissue disorders. She also founded and ran BendyBodyBlog, educating patients and providers on disability management from both the clinician and patient point of view.</p>
+    <p>Driven by empathy, precision, and a passion for innovation, Dr. Rogers continues to push the boundaries of rehabilitation science to ensure that patients with invisible illnesses are not only seen, but understood, supported, and empowered.</p>
+    <div class="list">
+    <div class="item"><div class="k">Education</div><div class="v"><p>Doctor of Physical Therapy, Drexel University, 2021, summa cum laude</p><p>BS in Health Sciences, Drexel University, 2019, magna cum laude</p><p>Wellness Counseling Certificate, Cornell University</p></div></div>
+    <div class="item"><div class="k">Honors</div><div class="v">
+      <p>Outstanding Healthcare Provider of the Year, The Ehlers-Danlos Society, 2022</p>
+      <p>Clinician of the Year, Strive Physical Therapy, 2022</p>
+      <p>Dragon Service Award, Most Well-Rounded DPT Student, Drexel University, 2021</p>
+      <p>Capstone Honor for Hypermobility Curriculum Introduction, Drexel University, 2021</p>
+      <p>Founder, Physical Therapy Residency Fair, Drexel University and APTA, 2020</p>
+      <p>Student Life Impact Award, Drexel University, 2019</p>
+      <p>Cinnaminson Hall of Fame, 2015</p>
+    </div></div>
+  </div>
+  <div class="gallery g3"><div class="photo"><span class="ph">Teaching photo</span></div><div class="photo"><span class="ph">Graduation photo</span></div><div class="photo"><span class="ph">CoRE photo</span></div></div>
+  </div>
+  <div class="list">
+    <div class="item"><div class="k">Speaking &amp; education</div><div class="v"><p>For speaking engagements and education sessions: Valerie.Rogers@mountsinai.org</p></div></div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section class="view" id="v-about" hidden>
   <div class="split">
@@ -416,29 +462,7 @@ button:hover{background:var(--accent-soft)}
     <p>Some days I can walk without a mobility aid! Other days I use forearm crutches, and for something I really want to do but know will set me into quite a flare (usually because of the seats, actually), I bring my wheels!</p>
   </div>
 
-  <div class="prose">
-    <span class="eyebrow">The Professional Bio</span>
-    <h2>Dr. Valerie Iovine Rogers, PT, DPT</h2>
-    <p>Dr. Valerie Iovine Rogers, PT, DPT, is a nationally recognized physical therapist, educator, and program manager specializing in complex chronic illnesses, with a particular focus on connective tissue disorders and autonomic dysfunction such as Ehlers-Danlos syndrome (EDS) and postural orthostatic tachycardia syndrome (POTS). She currently serves as a Program Manager at the Cohen Center for Recovery from Complex Chronic Illness (CoRE) at the Icahn School of Medicine at Mount Sinai, where she leads educational initiatives, develops clinical training for hypermobility and dysautonomia management, authored ATLAS, the Icahn School of Medicine at Mount Sinai's Autonomic Rehabilitation Framework, and its manual, founded the Iovine Cluster, co-authored the IACCI Provider Manual (2nd ed.), and contributes to ongoing research into underrecognized multisystemic conditions.</p>
-    <p>Dr. Rogers earned her Doctor of Physical Therapy and Bachelor of Science in Health Sciences through Drexel University's accelerated program, graduating magna cum laude (BS, 2019) and summa cum laude (DPT, 2021), with multiple leadership roles and honors. She later earned a Certificate in Wellness Counseling from Cornell University, graduating summa cum laude. Her academic journey has been marked by a deep commitment to patient advocacy, interprofessional collaboration, and the advancement of evidence-informed care models for underserved populations.</p>
-    <p>Before joining Mount Sinai, Dr. Rogers founded the EDS and POTS Clinical Specialty Program at Strive Physical Therapy. Under her leadership, the program grew rapidly to serve over 100 hypermobile patients annually, and she led a special interest group training physical therapists across the tri-state area to better understand and manage connective tissue disorders and autonomic dysfunction. Today she continues to train physical therapists across many PT companies.</p>
-    <p>Dr. Rogers has received numerous accolades for her work, including being named Strive Physical Therapy's Clinician of the Year and receiving the Outstanding Healthcare Provider of the Year award from the Ehlers-Danlos Society, an honor voted on by the patient community. She has presented nationally and internationally, including as an invited speaker at the Global Learning Conferences hosted by the Ehlers-Danlos Society in Dublin, Ireland (2023) and Philadelphia (2024).</p>
-    <p>Her research focuses on objectifying assessments of joint laxity in individuals with EDS, including collaborations with experts like Dr. Dawn Gulick. She has also contributed to the development of clinical pathways for POTS management within major healthcare systems, and leads research projects at the Icahn School of Medicine at Mount Sinai alongside Dr. David Putrino. A strong advocate for early recognition and interdisciplinary education, she has developed and delivered outreach programs for school nurses and other frontline healthcare providers to improve early identification of connective tissue disorders. She also founded and ran BendyBodyBlog, educating patients and providers on disability management from both the clinician and patient point of view.</p>
-    <p>Driven by empathy, precision, and a passion for innovation, Dr. Rogers continues to push the boundaries of rehabilitation science to ensure that patients with invisible illnesses are not only seen, but understood, supported, and empowered.</p>
-    <div class="list">
-    <div class="item"><div class="k">Education</div><div class="v"><p>Doctor of Physical Therapy, Drexel University, 2021, summa cum laude</p><p>BS in Health Sciences, Drexel University, 2019, magna cum laude</p><p>Wellness Counseling Certificate, Cornell University</p></div></div>
-    <div class="item"><div class="k">Honors</div><div class="v">
-      <p>Outstanding Healthcare Provider of the Year, The Ehlers-Danlos Society, 2022</p>
-      <p>Clinician of the Year, Strive Physical Therapy, 2022</p>
-      <p>Dragon Service Award, Most Well-Rounded DPT Student, Drexel University, 2021</p>
-      <p>Capstone Honor for Hypermobility Curriculum Introduction, Drexel University, 2021</p>
-      <p>Founder, Physical Therapy Residency Fair, Drexel University and APTA, 2020</p>
-      <p>Student Life Impact Award, Drexel University, 2019</p>
-      <p>Cinnaminson Hall of Fame, 2015</p>
-    </div></div>
-  </div>
-  <div class="gallery g3"><div class="photo"><span class="ph">Teaching photo</span></div><div class="photo"><span class="ph">Graduation photo</span></div><div class="photo"><span class="ph">CoRE photo</span></div></div>
-  </div>
+  <p class="biolink">Looking for my professional bio? <a href="#bio">Read it here →</a></p>
 
   <div class="list">
     <div class="item"><div class="k">Coaching</div><div class="v"><p>MShealthcoaching@mountsinai.org</p></div></div>
@@ -454,7 +478,7 @@ button:hover{background:var(--accent-soft)}
 </main>
 
 <script>
-const views=["home","work","coaching","about"];
+const views=["home","work","coaching","bio","about"];
 function show(v){
   if(!views.includes(v)) v="home";
   views.forEach(n=>{document.getElementById("v-"+n).hidden=n!==v});
@@ -473,7 +497,7 @@ document.getElementById("copy").dataset.copy="em";
 document.querySelectorAll("button[data-copy]").forEach(b=>b.addEventListener("click",()=>{
   const el=document.getElementById(b.dataset.copy), t=el.textContent;
   const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)};
-  const done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy email",1800)};
+  const done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent=b.dataset.label||"Copy email",1800)};
   try{navigator.clipboard.writeText(t).then(done).catch(sel)}catch(_){sel()}
 }));
 
