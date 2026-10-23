@@ -8,6 +8,8 @@
 <meta property="og:title" content="Dr. Valerie Rogers, PT, DPT">
 <meta property="og:description" content="Clinician, educator, and patient. Health coaching, education, and speaking on complex chronic illness.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://www.drvalerierogers.com/images/headshot.jpg">
+<meta name="twitter:card" content="summary">
 <meta property="og:url" content="https://www.drvalerierogers.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
@@ -163,6 +165,18 @@ button:hover{background:var(--accent-soft)}
 .headshot{aspect-ratio:1/1;width:100%;max-width:220px;border-radius:50%;background:var(--surface);border:3px solid var(--zebra);display:grid;place-items:center}
 .biolink{font-size:1.05rem}
 @media (max-width:620px){.intro{grid-template-columns:1fr}.headshot{max-width:160px}}
+.shot{margin:0;border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.shot img.pic{display:block;width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
+.shot.tall img.pic{aspect-ratio:3/4}
+.strip .shot img.pic{aspect-ratio:4/3}
+.g1{grid-template-columns:minmax(0,380px)}
+.g1 .shot img.pic{aspect-ratio:4/5}
+.shot figcaption{font-size:.88rem;color:var(--muted);padding:8px 12px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g4 .shot img.pic{aspect-ratio:1/1}
+.headshot img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.headshot{overflow:hidden}
+@media (max-width:820px){.g4{grid-template-columns:1fr 1fr}.strip{grid-template-columns:1fr 1fr}.strip .shot:last-child{grid-column:span 2}}
 .foot{border-top:1px solid var(--line);padding-block:32px 40px;color:var(--muted);font-size:.9rem;display:grid;gap:10px}
 
 @media (max-width:820px){
@@ -231,7 +245,7 @@ button:hover{background:var(--accent-soft)}
 <!-- WORK -->
 <section class="view" id="v-work" hidden>
   <div class="intro">
-    <div class="headshot" aria-label="Headshot placeholder"><span class="ph">Headshot</span></div>
+    <div class="headshot"><img src="images/headshot.jpg" alt="Headshot of Dr. Valerie Rogers"></div>
     <div class="stack">
       <span class="eyebrow">Short bio</span>
       <p id="shortbio">Dr. Valerie Iovine Rogers, PT, DPT, is a physical therapist and Program Manager at the Cohen Center for Recovery from Complex Chronic Illness (CoRE) at the Icahn School of Medicine at Mount Sinai. She is the author of ATLAS, Mount Sinai's Autonomic Rehabilitation Framework, and the founder of the Iovine Cluster. A nationally recognized educator in Ehlers-Danlos syndrome, dysautonomia, and infection-associated chronic illness, she has trained hundreds of physical therapists and lives with the conditions she treats.</p>
@@ -298,6 +312,8 @@ button:hover{background:var(--accent-soft)}
       <p><a href="https://www.fox29.com/video/1118281" target="_blank" rel="noopener">Watch my FOX 29 segment (2022)</a></p>
     </div></div>
   </div>
+
+  <div class="gallery g3 strip"><figure class="shot"><img class="pic" src="images/podium.jpg" alt="Val presenting at a podium at the 2024 Global Learning Conference" loading="lazy"></figure><figure class="shot"><img class="pic" src="images/glc-room.jpg" alt="Val presenting to a full room at the 2024 Global Learning Conference" loading="lazy"></figure><figure class="shot"><img class="pic" src="images/handle-with-care.jpg" alt="Val on stage in a Handle With Care shirt at the 2024 Global Learning Conference" loading="lazy"></figure></div>
 
   <div class="split" id="speaking">
     <div class="stack">
@@ -406,7 +422,7 @@ button:hover{background:var(--accent-soft)}
       <p>Cinnaminson Hall of Fame, 2015</p>
     </div></div>
   </div>
-  <div class="gallery g3"><div class="photo"><span class="ph">Teaching photo</span></div><div class="photo"><span class="ph">Graduation photo</span></div><div class="photo"><span class="ph">CoRE photo</span></div></div>
+  <div class="gallery g3"><figure class="shot"><img class="pic" src="images/glc-stage.jpg" alt="Val speaking on stage at The Ehlers-Danlos Society Global Learning Conference" loading="lazy"></figure><figure class="shot"><img class="pic" src="images/graduation.jpg" alt="Val in her doctoral cap and gown with a Congrats Doctor cake" loading="lazy"></figure><figure class="shot"><img class="pic" src="images/core.jpg" alt="Val and colleagues posing by the Cohen Center for Recovery from Complex Chronic Illness sign at Mount Sinai" loading="lazy"></figure></div>
   </div>
   <div class="list">
     <div class="item"><div class="k">Speaking &amp; education</div><div class="v"><p>For speaking engagements and education sessions: Valerie.Rogers@mountsinai.org</p></div></div>
@@ -419,7 +435,7 @@ button:hover{background:var(--accent-soft)}
     <div class="stack">
       <span class="eyebrow">About Me</span>
       <h2>Hi, I'm Dr. Val, and I turn lemons into lemonade.</h2>
-      <div class="photo" aria-label="Photo placeholder"><span class="ph">Farmers market photo</span></div>
+      <figure class="shot tall"><img class="pic" src="images/farmers-market.jpg" alt="Val smiling at a picnic table at a farmers market, with strawberries, sunflowers, and lemonade" loading="lazy"></figure>
     </div>
     <div class="stack">
       <p class="lede">I'm a physical therapist, researcher, wellness counselor, and educator. But more than anything, I'm someone who truly gets what it's like to live in a body that doesn't always follow the rules.</p>
@@ -442,11 +458,12 @@ button:hover{background:var(--accent-soft)}
     <p>I was told when I was younger that I "had an inside out brain." Things that were easy for others I would find a way to complicate, and things that seemed harder were what made more sense to me! I always came up with innovative backwards ways to do things. As a kid it was silly things like opening the banana at the other end to avoid the strings, but it's morphed into some cool, creative rehab techniques that have really helped people! I didn't know that not everyone's mind worked in pictures until I found myself in a growing group, helping my peers understand kinesiology in my doctorate program, and coming to this realization. It's things like that that make me appreciate my own uniqueness.</p>
     <p>I also was lucky enough to attain my doctorate of physical therapy while already knowing I wanted to specialize in hypermobility, so I had the unique opportunity to learn everything and then question, "and what would happen if the connective tissue or nervous system was faulty?" My dad always told me, "If you love what you do, you never work a day in your life." So I am spending my days doing something I'd want to as a career, but would also choose to do even if it weren't a job. And if you can't tell from this About Me, I really struggle with keeping things short, and I am an open book. Use my experiences to help you with yours, please!!!</p>
   </div>
+  <div class="gallery g4"><figure class="shot"><img class="pic" src="images/zebra.jpg" alt="Val smiling in a zebra-print top" loading="lazy"></figure><figure class="shot"><img class="pic" src="images/joe.jpg" alt="Val and her husband Joe dressed up for an event" loading="lazy"></figure><figure class="shot"><img class="pic" src="images/family.jpg" alt="Val with family at a celebration" loading="lazy"></figure><figure class="shot"><img class="pic" src="images/wedding.jpg" alt="Val and Joe cutting their wedding cake" loading="lazy"></figure></div>
 
   <div class="prose">
     <span class="eyebrow">My Diagnostic Journey</span>
     <h2>"That's too rare."</h2>
-    <div class="gallery g2"><div class="photo"><span class="ph">Crutches photo</span></div><div class="photo"><span class="ph">Phillies wheelchair photo</span></div></div>
+    <div class="gallery g1"><figure class="shot"><img class="pic" src="images/phillies.jpg" alt="Val in her wheelchair at a Phillies game, wearing a Phillies sweatshirt" loading="lazy"><figcaption>Bringing my wheels to the ballpark.</figcaption></figure></div>
     <p>I was always a clumsy kid. Constant ankle sprains, fingers bending back weirdly, not holding a pencil right. Just little things I didn't know were signs of anything. My cousins and I had flexibility contests (plot twist: they have EDS too). Eventually, those "silly little things" became real problems.</p>
     <p>In high school, I had my ankle reconstructed after a trampoline accident. A few years later, I needed the same surgery again. The surgeon, who had just been interviewed as one of the top doctors in the area, told me, "I've never seen this come undone before." I came to find out later, he actually noted hypermobility in my chart at that point, but I didn't know it yet!</p>
     <p>Through college, I was constantly dealing with pain and dizziness. I chalked it up to stress or being "just sensitive." Then one day in a kinesiology lecture, my professor said, <em>"Everything would work like this... unless you have Ehlers-Danlos Syndrome,"</em> and immediately brushed it off. But I sat straight up. I <em>felt</em> that.</p>
